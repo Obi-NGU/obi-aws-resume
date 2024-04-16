@@ -59,23 +59,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     document.addEventListener('DOMContentLoaded', function() {
-        const counter = document.querySelector("#visitorCount");
+        const counter = document.querySelector(".counter-number");
     
-        function fetchVisitorCount() {
-            fetch('https://7ivhn4hkstgdcbabio2uj2ckcq0ieebg.lambda-url.eu-west-2.on.aws/')
-            .then(response => response.json())
-            .then(data => {
-                // Update the visitor count on the webpage
-                counter.textContent = data.visitorCount;
-            })
-            .catch(error => console.error('Error fetching visitor count:', error));
+        async function fetchVisitorCount() {
+            try {
+                let response = await fetch('https://7ivhn4hkstgdcbabio2uj2ckcq0ieebg.lambda-url.eu-west-2.on.aws/');
+                let data = await response.json();
+                if (data.visitorCount !== undefined) {
+                    counter.textContent = 'Total Visitors: ' + data.visitorCount;
+                } else {
+                    counter.textContent = 'Failed to fetch visitor count';
+                }
+            } catch (error) {
+                console.error('Error fetching visitor count:', error);
+                counter.textContent = 'Failed to fetch visitor count';
+            }
         }
     
-        // Call the function to fetch visitor count initially when the page loads
+        // Call the function to fetch visitor count when the page loads
         fetchVisitorCount();
-    
-        // Update the visitor count periodically (every 30 seconds in this example)
-        setInterval(fetchVisitorCount, 30000);
     });
     
 });
