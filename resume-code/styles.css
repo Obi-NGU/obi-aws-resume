@@ -181,3 +181,8 @@ li {
     color: white;
 }
 
+.counter-number {
+    position: fixed;
+    border-radius: 5px;
+    font-size: 16px;
+}
