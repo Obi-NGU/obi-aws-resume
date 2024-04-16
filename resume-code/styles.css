@@ -181,4 +181,8 @@ li {
     color: white;
 }
 
-
+.visitorcount {
+    position: fixed;
+    border-radius: 5px;
+    font-size: 16px;
+}

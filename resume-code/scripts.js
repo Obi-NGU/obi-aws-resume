@@ -60,16 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
    
     // Visitor Counter Script
     // Function to make a GET request to your API endpoint
-    console.log('Fetching visitor count...');
-    function fetchVisitorCount() {
-        fetch('https://7ivhn4hkstgdcbabio2uj2ckcq0ieebg.lambda-url.eu-west-2.on.aws/')
-        .then(response => response.json())
-        .then(data => {
-            // Update the visitor count on the webpage
-            document.getElementById('visitorCount').textContent = data.visitorCount;
-        })
-        .catch(error => console.error('Error fetching visitor count:', error));
-    }
+    const counter = document.querySelector(".visitorCount");
+     async function fetchVisitorCount() {
+        let response = await fetch('https://7ivhn4hkstgdcbabio2uj2ckcq0ieebg.lambda-url.eu-west-2.on.aws/');
+        let data = await response.json()
+        counter.innerHTML = "Visitor Count: ${data}";
+     }
+        
 
     // Call the function to fetch visitor count when the page loads
     fetchVisitorCount();
