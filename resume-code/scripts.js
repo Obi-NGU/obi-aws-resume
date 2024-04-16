@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
    
     // Visitor Counter Script
     // Function to make a GET request to your API endpoint
-    const counter = document.querySelector(".visitorCount");
+    const counter = document.querySelector(".counter-number");
      async function fetchVisitorCount() {
         let response = await fetch('https://7ivhn4hkstgdcbabio2uj2ckcq0ieebg.lambda-url.eu-west-2.on.aws/');
         let data = await response.json()
-        counter.innerHTML = "Visitor Count: ${data}";
+        counter.innerHTML = ' Views: ${data}';
      }
         
 
