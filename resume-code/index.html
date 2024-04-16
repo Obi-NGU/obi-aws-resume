@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume - Obi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay loop muted id="video-background">
+        <source src="cofl.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="resume">
+        
+        <div class="top-section">
+            <div class="headshot-container">
+                <img src="headshot.jpg" alt="Your Name" class="resume-headshot">
+            </div>
+            <div class="contact-info">
+                <h1>Obi Mereni</h1>
+                <p>Junior Cloud Engineer | obinnamereni@gmail.com | 07948250144</p>
+            </div>
+        </div>
+
+        <section class="resume-section" id="experience">
+            <h2>Professional Experience</h2>
+            <div id="timeline"></div> <!-- Placeholder for timeline entries -->
+        </section>
+
+        <section class="resume-section" id="education">
+            <h2>Education</h2>
+            <span class="degree">Bachelor of Science in Mathematics</span>
+            <span class="school">University of Leicester, Sep 2020-Jul 2023</span>
+            <p class="uni">
+                Specialized in my analytical and critical thinking skills. Further demonstrated by Dissertation: "Mathematical Strategies in Chess: A Symbiotic Journey of Logic and Tactical Prowess”
+            </p>
+            <span class="degree">Generation Cloud Bootcamp AWS re/Start Programme </span>
+            <span class="school">Generation Jan-Apr 2024</span>
+            <p class="uni">
+                The Generation bootcamp offerred a comprehensive learning experience covering technical skills in cloud computing and networking alongside essential soft skills in customer relations and behavioural skills/mindsets. The AWS re/Start programme is a AWS Certified Cloud Practitioner Training course which I completed witin the bootcamp designed to provide individuals with the insight and working knowledge of the fundamentals of Amazon Web Services (AWS) cloud services. This course covers essential concepts, services, and best practices, enabling me to gain a comprehensive overview of AWS cloud computing.
+            </p>
+        </section>
+
+        <section class="resume-section" id="certifications">
+            <h2>Skills and Certifications</h2>
+            <div class="Badge-section1">
+                <div class="Badge-container">
+                    <img src="aws-re-start-graduate.jpg" alt="Digital Badge" class="Badge-headshot">
+                </div>
+                <div class="aws-restart">
+                    <p>
+                        The re/Start programme is a AWS Certified Cloud Practitioner Training boot camp designed to provide individuals with the insight and working knowledge of the  fundamentals of Amazon Web Services (AWS) cloud services. This course covers essential concepts, services, and best practices, enabling me to gain a comprehensive overview of AWS cloud computing.
+                    </p>
+                </div>
+            </div>
+            <div class="Badge-section2">
+                <div class="Badge-container2">
+                    <img src="CCP-Badge.jpg" alt="Digital Badge" class="Badge-headshot">
+                </div>
+                <div class="aws-ccp">
+                    <p class="ccp-descr">
+                        The AWS CCP (Certified Cloud Practitioner) certification validates foundational knowledge of cloud computing and AWS Cloud. It demonstrates understanding of AWS Cloud concepts, services, security, and billing. Holders of this certification are proficient in navigating the AWS Management Console, understanding AWS Global Infrastructure, and basic architectural principles of AWS Cloud. It's an entry-level certification suitable for individuals with non-technical or technical backgrounds who seek to validate their cloud knowledge and enhance their career prospects in cloud computing.
+                    </p>
+                    <ul class="bullet">
+                        <li>
+                            Driven to exceed personal goals, persevere through challenges, and seek support when essential
+                        </li>
+                        <li>
+                            Proficient in holding clear communication channels with colleagues and supervisors
+                        </li>
+                        <li>
+                            Meticulous attention to detail in design and implementation for precise configuration of robust business services
+                        </li>
+                        <li>
+                            Prioritises the customer experience, ensuring services meet or exceed end-users' expectations
+                        </li>
+                        <li>
+                            Takes ownership of challenges, navigating complex issues with a proactive and solution-driven approach
+                        </li>                    
+                    </ul>
+                    <p>
+                        I am passionate about honing my programming skills and becoming a proficient cloud engineer, as I enjoy translating theoretical concepts into practical applications and creating solutions that add value to the organization and society as a whole. I am also a person of individuality and self-expression, as reflected by my tattoos, I believe in embracing one's identity and expressing creativity in various forms, while maintaining a healthy and active lifestyle that fosters discipline, resilience and goal-setting shown by my fitness-related social media channels below where I upload fitness related tips and motivation in addition to my personal bodybuilding journey as Crane💪 down below⬇️
+                    </p>
+                </div>
+            </div>  
+        </section>
+        <div class="social-media">
+            <a href="https://www.instagram.com/crane_ngu?igshid=NGVhN2U2NjQ0Yg%3D%3D" target="_blank" class="social-link instagram">Instagram</a>
+            <a href="https://www.tiktok.com/@cranengu" target="_blank" class="social-link tiktok">Tiktok</a>
+            <a href="www.linkedin.com/in/obi-mereni-45b252169" target="_blank" class="social-link linkedin">Linkedin</a>
+          </div>
+    </div>
+
+    <div>Total Visitors: <span id="visitorCount">0</span></div> <!-- Visitor counter -->
+
+    <script src="scripts.js"></script> <!-- Include your JavaScript file -->
+</body>
+</html>
