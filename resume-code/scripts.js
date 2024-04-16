@@ -57,22 +57,25 @@ document.addEventListener('DOMContentLoaded', function() {
         timeline.appendChild(entry);
     });
 
-   
-    // Visitor Counter Script
-    // Function to make a GET request to your API endpoint
-    const counter = document.querySelector(".counter-number");
-    async function fetchVisitorCount() {
-        try {
-            let response = await fetch('https://7ivhn4hkstgdcbabio2uj2ckcq0ieebg.lambda-url.eu-west-2.on.aws/');
-            let data = await response.json();
-            counter.textContent = `Views: ${data.visitorCount}`;
-        } catch (error) {
-            console.error('Error fetching visitor count:', error);
-            counter.textContent = 'Couldn\'t read views';
-        }
-    }
-    
-    // Call the function to fetch visitor count when the page loads
-    fetchVisitorCount();
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const counter = document.querySelector("#visitorCount");
+    
+        function fetchVisitorCount() {
+            fetch('https://7ivhn4hkstgdcbabio2uj2ckcq0ieebg.lambda-url.eu-west-2.on.aws/')
+            .then(response => response.json())
+            .then(data => {
+                // Update the visitor count on the webpage
+                counter.textContent = data.visitorCount;
+            })
+            .catch(error => console.error('Error fetching visitor count:', error));
+        }
+    
+        // Call the function to fetch visitor count initially when the page loads
+        fetchVisitorCount();
+    
+        // Update the visitor count periodically (every 30 seconds in this example)
+        setInterval(fetchVisitorCount, 30000);
+    });
+    
 });
